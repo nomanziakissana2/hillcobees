@@ -1,0 +1,56 @@
+@media (max-width: 1290px) {
+  .card-heading {
+    top: 66%;
+  }
+}
+@media (max-width: 1140px) {
+  #header {
+    /* top: 1px; */
+    padding: 1rem 0;
+  }
+  nav {
+    display: none;
+  }
+  .col-1 {
+    flex: 0 1 calc(50% - 0px);
+  }
+  .card-sec.row {
+    row-gap: 0;
+  }
+  .card {
+    border: 0;
+    margin: 0;
+  }
+}
+@media (max-width: 640px) {
+  .hillco-logo {
+    max-width: 185;
+  }
+  #header {
+    padding: 1rem 0 1rem 0;
+  }
+
+  .top-bar {
+    flex-direction: column;
+  }
+  .conferance.row {
+    flex-direction: column;
+  }
+  .c-col {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .conf-left {
+    width: 100%;
+    margin: 3rem 3rem 0rem 3rem;
+  }
+  .btn-special {
+    width: 280px;
+    margin: auto;
+    font-size: calc(
+      var(--base-text-font-size) - (var(--default-text-font-size) - 12px)
+    );
+    border: 0;
+  }
+} ;

@@ -1,0 +1,10 @@
+.Icon {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  vertical-align: middle;
+  stroke-width: 1px;
+  background: none;
+  pointer-events: none;
+}

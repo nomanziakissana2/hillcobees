@@ -1,0 +1,60 @@
+.Image--slideRight,
+.Image--slideLeft {
+  transform: translateX(25px);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.Image--slideLeft {
+  transform: translateX(-25px);
+}
+
+.Image--lazyLoaded.Image--slideRight,
+.Image--lazyLoaded.Image--slideLeft {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.Image__Loader {
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 50px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  margin: auto;
+  pointer-events: none;
+  background-color: var(--border-color);
+  z-index: -1;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.Image__Loader::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 200%;
+  background-color: var(--heading-color);
+}
+
+.Image--lazyLoading + .Image__Loader {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.Image--lazyLoading + .Image__Loader::after {
+  -webkit-animation: lazyLoader 3s infinite;
+  animation: lazyLoader 3s infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.43, 0.43, 0.25, 0.99);
+  animation-timing-function: cubic-bezier(0.43, 0.43, 0.25, 0.99);
+}
